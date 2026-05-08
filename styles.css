@@ -28,13 +28,22 @@
   text-decoration: line-through underline !important;
 }
 
-.total-count { color: #c2bcb2; }
+.total-count { color: #e69138; }
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th { background-color: #1c2628; }
+.in_progress { color: #e69138; }
 .alert-step { background-color: #53514c; }
+
+label.checkbox:has(input[type="checkbox"]:checked) {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
 
 /* Dark theme */
 body {
-  background-color: #1a1918;
-  color: #c8c4bc;
+  background-color: #1c2628;
+  color: #ece7dd;
+  font-family: 'Vollkorn', serif;
 }
 
 a {
@@ -89,8 +98,12 @@ hr {
   border-bottom-color: #252320;
 }
 
-h2, h3 {
+h2 {
   color: #d4d0c8;
+}
+
+h3 {
+  color: #e69138;
 }
 
 .btn {

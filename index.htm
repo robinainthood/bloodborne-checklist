@@ -11,7 +11,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
   <link href="main.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jstorage/0.4.12/jstorage.min.js"></script>
+  <script src="jstorage.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
   <script src="app.js"></script>
   <script src="main.js"></script>
@@ -21,11 +21,10 @@
     <div class="navbar">
       <div class="navbar-inner">
         <h1>Bloodborne checklist</h1>
-        <p>By <a href="https://modo.lv/">modo_lv</a>. I also make <a href="https://guides.modo.lv/">other guides</a>.</p>
         <ul class="nav nav-tabs">
           <li class="active"><a href="#tabPlaythrough" data-toggle="tab">Playthrough</a></li>
           <li class=""><a href="#tabChecklists" data-toggle="tab">Checklists</a></li>
-          <li class=""><a href="#tabInformation" data-toggle="tab">Information</a></li>
+          <li class=""><a href="#tabInformation" data-toggle="tab">Reference</a></li>
           <li class=""><a href="#tabHelp" data-toggle="tab">FAQ</a></li>
         </ul>
         <div class="profile" style="float: right;">
@@ -40,7 +39,16 @@
 
     <div id="intro">
       <p>
-        A 100% spoiler-free version of <a href="https://modo-lv.github.io/bloodborne-checklist/">modo_lv's checklist</a> to keep track of Bloodborne progress, now with moon phase triggers.
+        A 100% spoiler-free version of <a href="https://modo-lv.github.io/bloodborne-checklist/">modo_lv's checklist</a> to keep track of Bloodborne progress, now with moon phase trigger indicators. It functions less as an exhaustive list of every single item in the game and more as a vague guide to help you get the most out of your first playthrough without spoiling anything for yourself. I would suggest just exploring freely with the progression triggers in mind and referring to the checklist when you feel like you're ready to move on but want to make sure you haven't missed anything important.
+        <br><br>
+        Reference Guide:
+        <br>
+        <li><span class="alert-step">! Text here !</span> - Indicates a phase trigger. In other words, doing this event or action will trigger the next game phase, progressing or disrupting ongoing NPC quests and the like.</li>
+        <li>Checklists tab is for Achievement completionists.</li>
+        <li>Reference tab is for Coldblood figures.</li>
+        <li>Feel free to use the profile selector/creator in the top right for different saves.</li>
+        <br>
+        Happy hunting!
       </p>
     </div>
 
@@ -95,7 +103,7 @@
         <h3 id="Central_Yharnam"><a href="https://www.bloodborne-wiki.com/2015/03/central-yharnam.html">Central Yharnam</a> <span id="playthrough_totals_3" class="in_progress">[0/8]</span></h3>
         <ul>
           <li><label class="checkbox"><input type="checkbox" id="playthrough_3_1">Talk to Gilbert.</label></li>
-          <li><label class="checkbox"><input type="checkbox" id="playthrough_3_2">Encounter area boss on the Great Bridge to unlock the level-up doll in Hunter's Dream.</label>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_3_2">Encounter the area boss on the Great Bridge to unlock the level-up doll in Hunter's Dream.</label>
             <ul>
               <li><label class="checkbox"><input type="checkbox" id="playthrough_3_3">Defeat this boss to get Sword Hunter Badge.</label></li>
             </ul>
@@ -147,7 +155,7 @@
           <li><label class="checkbox"><input type="checkbox" id="playthrough_7_2">Pick up trick weapon <span class="total-count">[Total: 1]</span>.</label></li>
           <li><label class="checkbox"><input type="checkbox" id="playthrough_7_3">Pick up armor set <span class="total-count">[Total: 1]</span>.</label></li>
           <li><label class="checkbox"><input type="checkbox" id="playthrough_7_4">Pick up Bloody Messenger Head Bandage.</label></li>
-          <li><label class="checkbox"><input type="checkbox" id="playthrough_7_5">Defeat area boss and receive Pthumeru Chalice.</label>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_7_5">Defeat the area boss and receive Pthumeru Chalice.</label>
             <ul>
               <li><label class="checkbox"><input type="checkbox" id="playthrough_7_6">This will also unlock the door to Healing Church Workshop back at Oedon Chapel, aka your shortcut/alternate route past the locked gate in Cathedral Ward.</label></li>
             </ul>
@@ -184,7 +192,7 @@
             </ul>
           </li>
           <li><label class="checkbox"><input type="checkbox" id="playthrough_9_5">Pick up armor set <span class="total-count">[Total: 1]</span>.</label></li>
-          <li><label class="checkbox"><input type="checkbox" id="playthrough_9_6"><span class="alert-step">! Defeat area boss to get Gold Pendant and the password for the Forbidden Woods. !</span></label></li>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_9_6"><span class="alert-step">! Defeat the area boss to get Gold Pendant and the password for the Forbidden Woods. !</span></label></li>
         </ul><br>
 
         <!-- Hemwick Charnel Lane -->
@@ -259,11 +267,12 @@
           <li><label class="checkbox"><input type="checkbox" id="playthrough_16_2">Pick up armor piece <span class="total-count">[Total: 2]</span>.</label></li>
           <li><label class="checkbox"><input type="checkbox" id="playthrough_16_3">Pick up armor set <span class="total-count">[Total: 2]</span>.</label></li>
           <li><label class="checkbox"><input type="checkbox" id="playthrough_16_4">Pick up firearm <span class="total-count">[Total: 1]</span>.</label></li>
-          <li><label class="checkbox"><input type="checkbox" id="playthrough_16_5">Defeat the area boss.</label>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_16_5">Pick up Vileblood Register.</label></li>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_16_6">Defeat the area boss.</label>
             <ul>
-              <li><label class="checkbox"><input type="checkbox" id="playthrough_16_6">Wear the newly obtained armor piece while standing in front of the throne.</label></li>
-              <li><label class="checkbox"><input type="checkbox" id="playthrough_16_7">Talk to Annalise.</label></li>
-              <li><label class="checkbox"><input type="checkbox" id="playthrough_16_8">Pick up Unopened Summons and bring it to Alfred in Cathedral Ward (near Forbidden Woods entrance). Return to Cainhurst to find him and continue his questline.</label></li>
+              <li><label class="checkbox"><input type="checkbox" id="playthrough_16_7">Wear the newly obtained armor piece while standing in front of the throne.</label></li>
+              <li><label class="checkbox"><input type="checkbox" id="playthrough_16_8">Talk to Annalise.</label></li>
+              <li><label class="checkbox"><input type="checkbox" id="playthrough_16_9">Pick up Unopened Summons and bring it to Alfred in Cathedral Ward (near Forbidden Woods entrance). Return to Cainhurst to find him and continue his questline.</label></li>
             </ul>
           </li>
         </ul>
@@ -360,35 +369,37 @@
 
         <h3 id="hunters_nightmare"><a href="https://www.bloodborne-wiki.com/2015/03/hunter.html's+Nightmare">Hunter's Nightmare</a> (DLC) <span id="playthrough_totals_24" class="in_progress">[0/11]</span></h3>
         <ul>
-            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_1">Pick up armor piece <span class="total-count">[Total: 7]</span>.</label></li>
+            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_1">Pick up armor piece <span class="total-count">[Total: 8]</span>.</label></li>
             <li><label class="checkbox"><input type="checkbox" id="playthrough_24_2">Pick up trick weapon <span class="total-count">[Total: 5]</span>.</label></li>
             <li><label class="checkbox"><input type="checkbox" id="playthrough_24_3">Pick up firearm <span class="total-count">[Total: 2]</span>.</label></li>
-            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_4">Defeat the Beast Claw hunter.</label></li>
-            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_5">Talk to Simon.</label></li>
-            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_6">Obtain armor set <span class="total-count">[Total: 1]</span>.</label></li>
-            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_7">Defeat the area boss.</label>
+            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_4">Pick up Eye Pendant.</label></li>
+            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_5">Defeat the Beast Claw hunter.</label></li>
+            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_6">Talk to Simon.</label></li>
+            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_7">Obtain armor set <span class="total-count">[Total: 1]</span>.</label></li>
+            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_8">Defeat the area boss.</label>
               <ul>
-                <li><label class="checkbox"><input type="checkbox" id="playthrough_24_8">Talk to the NPC in the corner while wearing any church garb.</label></li>
+                <li><label class="checkbox"><input type="checkbox" id="playthrough_24_9">Talk to the NPC in the corner while wearing any church garb.</label></li>
               </ul>
             </li>
-            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_9">Pick up Fist of Gratia.</label></li>
-            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_10">Pick up Blood Stone Chunk.</label></li>
-            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_11">Pick up two items from the altar.</label></li>
+            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_10">Pick up Fist of Gratia.</label></li>
+            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_11">Pick up Blood Stone Chunk.</label></li>
+            <li><label class="checkbox"><input type="checkbox" id="playthrough_24_12">Pick up two items from the altar.</label></li>
         </ul>
 
         <!-- Research Hall -->
         <h3 id="research_hall"><a href="https://www.bloodborne-wiki.com/2015/11/research-hall.html">Research Hall</a> (DLC) <span id="playthrough_totals_25" class="in_progress">[0/9]</span></h3>
         <ul>
           <li><label class="checkbox"><input type="checkbox" id="playthrough_25_1">Pick up armor set <span class="total-count">[Total: 1]</span>.</label></li>
-          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_2">Pick up Brain Fluid <span class="total-count">[Total: 2]</span> and bring to Adeline. (Tip: Reloading area is effective.)</label></li>
-          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_3">Pick up armor piece <span class="total-count">[Total: 1]</span>.</label></li>
-          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_4">Pick up Loch Shield.</label></li>
-          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_5">Pick up Underground Cell Key.</label></li>
-          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_6">Use the Balcony Key on the locked door on the ground floor.</label></li>
-          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_7">Defeat the first area boss.</label></li>
-          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_8">Defeat the second area boss.</label>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_2">Obtain rune <span class="total-count">[Total: 1]</span></label></li>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_3">Pick up Brain Fluid <span class="total-count">[Total: 2]</span> and bring to Adeline. (Tip: Reloading area is effective.)</label></li>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_4">Pick up armor piece <span class="total-count">[Total: 1]</span>.</label></li>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_5">Pick up Loch Shield.</label></li>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_6">Pick up Underground Cell Key.</label></li>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_7">Use the Balcony Key on the locked door on the ground floor.</label></li>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_8">Defeat the first area boss.</label></li>
+          <li><label class="checkbox"><input type="checkbox" id="playthrough_25_9">Defeat the second area boss.</label>
             <ul>
-              <li><label class="checkbox"><input type="checkbox" id="playthrough_25_9">Use key to access the next area.</label></li>
+              <li><label class="checkbox"><input type="checkbox" id="playthrough_25_10">Use key to access the next area.</label></li>
             </ul>
           </li>
         </ul>
@@ -436,7 +447,7 @@
 
         <hr>
 
-        <h3 id="Hunters_Essence">Hunter's Essence (Acquire all <a href="http://bloodborne.wiki.fextralife.com/Weapons">Weapons</a>) <span id="checklist_totals_1" class="in_progress">[0/42]</span></h3>
+        <h3 id="Hunters_Essence">Hunter's Essence (Acquire all Weapons) <span id="checklist_totals_1" class="in_progress">[0/42]</span></h3>
         <h4>Trick Weapons</h4>
         <ul>
           <li><label class="checkbox"><input type="checkbox" id="checklist_1_1"><a href="https://www.bloodborne-wiki.com/2015/03/beast-claw.html">Beast Claw</a> - <a href="https://www.bloodborne-wiki.com/2015/03/ailing-loran-chalice.html">Ailing Loran Chalice</a></label></li>
@@ -492,7 +503,7 @@
           <li><label class="checkbox"><input type="checkbox" id="checklist_1_42"><a href="https://www.bloodborne-wiki.com/2015/11/loch-shield.html">Loch Shield</a></label></li>
         </ul>
 
-        <h3 id="Hunters_Craft">Hunter's Craft (Acquire all <a href="http://bloodborne.wiki.fextralife.com/Hunter+Tools">Hunter Tools</a>) <span id="checklist_totals_2" class="in_progress">[0/11]</span></h3>
+        <h3 id="Hunters_Craft">Hunter's Craft (Acquire all Hunter Tools) <span id="checklist_totals_2" class="in_progress">[0/11]</span></h3>
         <h4>Hunter Tools</h4>
         <ul>
           <li><label class="checkbox"><input type="checkbox" id="checklist_2_1"><a href="https://www.bloodborne-wiki.com/2015/03/old-hunter-bone.html">Old Hunter Bone</a> - Found near a tombstone in the <a href="https://www.bloodborne-wiki.com/2015/03/abandoned-old-workshop.html">Old Abandoned Workshop</a></label></li>
@@ -512,7 +523,7 @@
         </ul>
       </div>
       <div class="tab-pane" id="tabInformation">
-        <h2>Information</h2>
+        <h2>Reference</h2>
         <ul>
           <li><a href="#Coldblood_Types">Coldblood Types</a></li>
         </ul>
@@ -558,14 +569,12 @@
 
           <h3>Do I need to follow the playthrough in this exact order?</h3>
           <p>Bloodborne is not a linear game and has multiple ways of 
-progressing. This is generally the way I like to play through the game, 
-so feel free to follow it if you like or mix it up. You can always jump 
-back and forth and check things off in a different order. However, some 
-of the NPC questlines do have specific requirements on when or how you 
+progressing, so you can always jump 
+back and forth and check things off in a different order. However, most NPC questlines do have specific requirements for when or how you 
 do things, so it is possible to miss things that way. This checklist
- tries to get the most of out of any NPC quests (items, gestures, etc.),
+ tries to get the most of out of any NPC quests (items, gestures, etc.) and following its order will be the most effective way of doing that,
  but if you want to make full, informed choices, check the wiki for 
-details on the NPCs you encounter.</p>
+details on the NPCs you encounter. Be aware of major spoilers, in that case.</p>
 
           <h3>Can I use this for multiple characters?</h3>
           <p>Yup, use the profile selector and buttons at the top right of the page to setup multiple characters.</p>
